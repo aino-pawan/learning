@@ -1,6 +1,7 @@
 package com.pawan.learning_app;
 
 import org.junit.jupiter.api.Test;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,7 +16,12 @@ public class AppTest {
 		
 		System.setOut(printStream);
 
-		App.main(new String[] {});
+		try {
+			App.main(new String[] {});
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		System.setOut(originalOut);
 		
